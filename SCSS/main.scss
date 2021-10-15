@@ -1,0 +1,182 @@
+@import "header";
+
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+  color: black;
+  font-size: 1.5rem; }
+
+header {
+  grid-area: header; }
+
+footer {
+  grid-area: footer; }
+
+label {
+  margin-left: 7%; }
+
+table {
+  border: 3px solid;
+  margin: 10%; }
+
+th {
+  background-color: #cccccc;
+  border: 1px solid; }
+
+tr, td {
+  border: 1px solid; }
+
+p {
+  color: black;
+  margin: 2%; }
+
+.lista {
+  color: orangered; }
+
+.menu {
+  list-style-type: none; }
+
+.pequeño__fondo {
+  max-width: 80%;
+  background-color: #FCF4E4; }
+
+.titulo__tabla {
+  color: blue;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 100%; }
+
+.titulo {
+  color: darkred;
+  margin: 7%; }
+
+.Link__sin__sub {
+  text-decoration: none;
+  color: white; }
+
+.fondo {
+  background-color: black;
+  color: white;
+  width: 100%; }
+
+.bloque {
+  border: 3px;
+  width: 18%;
+  display: inline-grid;
+  padding: 30px;
+  text-align: center; }
+
+.bloque2 {
+  border: 3px;
+  width: 40%;
+  display: inline-grid;
+  padding: 30px;
+  text-align: center; }
+
+.alineacion__derecha {
+  text-align: right;
+  margin-right: 10px; }
+
+.centrado {
+  text-align: center; }
+
+.centradoimg {
+  margin-left: 23%; }
+
+.agrandar {
+  font-size: 80%; }
+
+/*
+.salto {
+    display: block;
+    margin-top: 20px;
+}
+*/
+.imagen {
+  padding: 3%;
+  margin: 3%;
+  float: left;
+  width: 50%; }
+
+.imagen__derecha {
+  float: right;
+  text-align: top;
+  width: 30%;
+  margin-bottom: 10%; }
+
+.img__principal {
+  margin-right: 1.5%;
+  margin-left: 1.5%;
+  width: 97%; }
+
+.contenedor {
+  display: inblock-grid;
+  max-width: 60%;
+  margin: 8%;
+  padding: 2%;
+  background: #F9DBAE;
+  border-top: 1px black;
+  margin-left: 18%; }
+
+.margen4 {
+  margin-left: 8%; }
+
+.margenizq {
+  margin-left: 4%; }
+
+.margen {
+  margin: 5%; }
+
+.margentop {
+  margin-top: 5%; }
+
+.margenbot {
+  margin-bottom: 5%; }
+
+.flex__container1 {
+  display: flex;
+  flex-direction: row;
+  background-color: #F9DBAE;
+  justify-content: space-around;
+  align-content: center; }
+
+.fondo__gradiente {
+  background-image: linear-gradient(to right, orange, yellow); }
+
+@keyframes esfumado {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.titulo__esfumado {
+  animation-duration: 2s;
+  animation-name: esfumado;
+  animation-iteration-count: infinite;
+  transform: scale(0.7); }
+
+/*input:focus {
+   width: 200px;
+   font-size: 24px;
+} */
+@media screen and (max-width: 800px) {
+
+  @each  $conteiner in grid__conteiner__index, grid__container__asesoramiento,
+  grid__container__psicomotricidad, grid__container__quiensoy, grid__container__talleres{
+      .#{$conteiner}{
+          padding: 0;
+          font-size: 80%;
+          display: flex;
+          /*overflow: hidden;*/ 
+        }
+      }
+    
+  .flex__container1 {
+    display: grid;
+    background-color: #F9DBAE; } }

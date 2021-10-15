@@ -1,0 +1,102 @@
+
+
+$naranja: #F3B556;
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+li {
+  display: inline-block;
+  width: 16%;
+  position: relative;
+  /*para que el menu se despliegue*/ }
+
+a:hover {
+  background-color: orange; }
+
+li {
+  a {
+      font-size: 70%;
+      text-align: center;
+      display: block;
+      color: white !important;
+      @if $naranja == #F3B556 {
+          background-color: $naranja;}
+      padding: 0%;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: sans-serif; }
+}
+ul {
+  ul {
+      position: absolute;
+      display: none; }
+}
+
+ul {
+  ul {
+    li {
+       width: 100%;
+       z-index: 1; }
+      }
+    }
+
+ul  li:hover ul {
+  display: block; }
+
+.grid__container__index {
+  display: inblock-grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  grid-template-areas: "header header header" 
+ "imagen__index imagen__index imagen__index"
+ "cuadrado__psicomotricidad cuadrado__asesoramiento cuadrado__talleres cuadrado__quiensoy"
+ "footer footer footer";
+  flex-wrap: wrap; }
+
+.grid__container__asesoramiento {
+  display: inblock-grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  grid-template-areas: "header header header" 
+ "supervicion familias ."
+ " formulario formulario ."
+ "footer footer footer"; 
+  flex-wrap: wrap; }
+
+.grid__container__psicomotricidad {
+  display: inblock-grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  grid-template-areas: "header header header" 
+ "texto__psicomotricidad texto__psicomotricidad texto__psicomotricidad"
+ "texto texto texto"
+ "destinatarios ambito__trabajo recursos rol"
+ "footer footer footer"; 
+  flex-wrap: wrap; }
+
+.grid__container__quiensoy {
+  display: inblock-grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  grid-template-areas: "header header header" 
+ "quiensoy quiensoy quiensoy"
+ "footer footer footer"; 
+  flex-wrap: wrap; }
+
+.grid__container__talleres {
+  display: inblock-grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  grid-template-areas: "header header header" 
+ "titulo__talleres titulo__talleres titulo__talleres"
+ "video video video"
+ "tabla tabla tabla"
+ "footer footer footer";
+  flex-wrap: wrap;  }
